@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CryptoFlow | Modern Cryptocurrency Trading</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+
+    <style>
+        body {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            background-color: rgb(36, 41, 61);
+        }
+
+
+        .navbar {
+            background-color: rgb(36, 41, 61);
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        .navbar-brand {
+            font-size: 25px;
+            font-weight: bold;
+            color: white;
+        }
+
+        .navbar-brand span {
+            color: lightblue;
+        }
+
+        .nav-link {
+            font-size: 17px;
+            color: lightgray !important;
+            margin-right: 20px;
+        }
+
+        .nav-link:hover {
+            color: white !important;
+        }
+
+        .bi-list {
+            color: white;
+            font-size: 30px;
+        }
+
+        .btn-header {
+            display: flex;
+            gap: 10px;
+        }
+
+        .btnHdrLogin {
+            color: rgb(155, 135, 245);
+            padding: 10px;
+            font-size: 16px;
+            font-weight: bold;
+            border: 1px solid rgb(155, 135, 245);
+            background: none;
+            border-radius: 20px;
+            transition: 0.3s;
+        }
+
+        .btnHdrLogin:hover {
+            color: white;
+            border-color: rgb(155, 135, 245);
+        }
+
+        .btnHdrBuy {
+            background-color: rgb(155, 135, 245);
+            color: white;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 20px;
+            transition: 0.3s;
+        }
+
+        .btnHdrBuy:hover {
+            background-color: rgb(111, 83, 231);
+        }
+
+
+        .main-area {
+            height: 700px;
+            background-image: radial-gradient(circle 800px at center, rgb(75, 74, 116) 1%, rgb(36, 41, 61) 100%);
+            overflow: hidden;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            padding: 50px;
+        }
+
+        .hero-content {
+            max-width: 600px;
+        }
+
+        .hero-badge {
+            color: white;
+            border: 1px solid rgb(149, 137, 205);
+            border-radius: 15px;
+            padding: 5px 10px;
+            font-size: 12px;
+            width: fit-content;
+            margin-bottom: 20px;
+        }
+
+        .hero-badge span {
+            color: rgb(149, 137, 205);
+        }
+
+        .hero-title {
+            color: white;
+            font-size: 60px;
+            font-weight: bold;
+            line-height: 60px;
+            margin-bottom: 15px;
+        }
+
+        .hero-title span {
+            color: rgb(149, 137, 205);
+        }
+
+        .hero-text {
+            color: lightgray;
+            font-size: 22px;
+            line-height: 30px;
+            margin-bottom: 20px;
+        }
+
+        .hero-buttons .btn {
+            font-size: 18px;
+            border-radius: 25px;
+            padding: 10px 20px;
+        }
+
+        .btnMainStart {
+            background-color: rgb(155, 135, 245);
+            color: white;
+            margin-right: 10px;
+            transition: 0.3s;
+        }
+
+        .btnMainStart:hover {
+            background-color: rgb(111, 94, 180);
+        }
+
+        .btnMainView {
+            background-color: black;
+            color: white;
+            transition: 0.3s;
+        }
+
+        .btnMainView:hover {
+            background-color: gray;
+        }
+
+        .imgBody {
+            width: 500px;
+            height: 330px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.05);
+            object-fit: cover;
+
+        }
+
+
+        .mainFooter {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 400px;
+            margin-top: 30px;
+        }
+
+        .mfTitle {
+            color: white;
+            font-weight: bold;
+            font-size: 25px;
+            position: relative;
+        }
+
+        .mfSub {
+            font-size: 15px;
+            color: lightgray;
+            font-weight: normal;
+        }
+
+        .mainFooter .mfTitle:not(:last-child)::after {
+            content: "";
+            position: absolute;
+            right: -20px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 1px;
+            height: 45px;
+            background-color: gray;
+        }
+
+
+        .features-section {
+            background-color: rgb(27, 31, 50);
+            padding: 80px 50px;
+            text-align: center;
+        }
+
+        .ftrTitle {
+            color: rgb(152, 134, 230);
+            font-size: 40px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .ftrSub {
+            color: lightgray;
+            font-size: 20px;
+            margin-bottom: 50px;
+        }
+
+        .ftrRow {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .ftrCard {
+            flex: 1 1 30%;
+            min-width: 300px;
+            background-color: rgb(35, 36, 45);
+            border: 1px solid gray;
+            border-radius: 15px;
+            padding: 20px;
+            transition: 0.3s;
+            text-align: left;
+        }
+
+        .ftrCard:hover {
+            background-color: rgb(48, 49, 56);
+        }
+
+        .ftrIcon {
+            color: rgb(152, 134, 230);
+            font-size: 30px;
+            background-color: rgb(82, 64, 165);
+            border-radius: 15px;
+            padding: 8px 12px;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+
+        .ftrCardTitle {
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .ftrCardText {
+            color: lightgray;
+            font-size: 15px;
+        }
+
+        .howItWorks {
+            background-color: rgb(27, 31, 50);
+            text-align: center;
+            text-align: center;
+            height: auto;
+            padding: 80px 50px;
+        }
+
+        .hiwTitle {
+            color: rgb(152, 134, 230);
+            font-size: 40px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .hiwSub {
+            color: lightgray;
+            font-size: 20px;
+            margin-bottom: 50px;
+        }
+
+        .hiwCards {
+            display: flex;
+            justify-content: space-between;
+            text-align: left;
+            margin-bottom: 80px;
+        }
+
+        .hiwCard {
+            border: 1px solid gray;
+            border-radius: 15px;
+            background-color: rgb(35, 36, 45);
+            flex: 1;
+            margin-right: 25px;
+            padding: 20px;
+            position: relative;
+        }
+
+        .hiwCardIcon {
+            color: rgb(152, 134, 230);
+            font-size: 30px;
+            background-color: rgb(82, 64, 165);
+            border-radius: 15px;
+            padding: 8px 12px;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
+        .hiwCardTitle {
+            font-size: 25px;
+            font-weight: bold;
+            color: white;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            margin-bottom: 10px;
+        }
+
+        .hiwCardSub {
+            color: lightgray;
+            font-size: 18px;
+        }
+
+        .hiwCardNumber {
+            padding: 10px;
+            background-color: rgb(45, 38, 78);
+            border: 1px solid rgb(82, 64, 165);
+            border-radius: 10px;
+            width: 100%;
+            max-width: 40px;
+            font-size: 20px;
+            color: rgb(152, 134, 230);
+            font-weight: bold;
+            position: absolute;
+            top: -20px;
+            left: -20px;
+        }
+
+        .hiwButton {
+            text-align: center;
+        }
+
+        .btnHiw {
+            background-color: rgb(82, 64, 165);
+            padding: 10px;
+            color: white;
+        }
+
+        .testimonials-area {
+            padding: 80px 50px;
+            text-align: center;
+            height: auto;
+            background-color: rgb(27, 31, 50);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            box-sizing: border-box;
+        }
+
+        .taTitle {
+            color: rgb(152, 134, 230);
+            font-size: 40px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .taSub {
+            color: lightgray;
+            font-size: 20px;
+            margin-bottom: 50px;
+        }
+
+        .carousel-area {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+
+        .carousel-item,
+        .carousel-inner {
+            height: 40vh;
+        }
+
+        .carousel {
+            min-height: 45vh;
+            width: 100%;
+        }
+
+        .carousel-reviews {
+            width: 100%;
+            border: 1px solid gray;
+            border-radius: 15px;
+            background-color: rgb(35, 36, 45);
+            padding: 40px;
+            text-align: left;
+        }
+
+        .ca-ratings span {
+            color: yellow;
+        }
+
+        .ca-review {
+            font-size: 20px;
+            color: lightgray;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .ca-profile {
+            display: flex;
+            gap: 15px;
+        }
+
+        .ca-image {
+            border: 1px solid rgb(152, 134, 230);
+            border-radius: 100px;
+            height: 50px;
+            width: 50px;
+        }
+
+        .ca-name {
+            color: white;
+            font-size: 20px;
+            display: block;
+        }
+
+        .ca-post {
+            color: lightgray;
+            font-size: 15px;
+        }
+
+        .pricing-area {
+            background-color: rgb(27, 31, 50);
+            text-align: center;
+            padding: 80px 50px;
+            height: auto;
+        }
+
+        .paTitle {
+            color: rgb(152, 134, 230);
+            font-size: 40px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .paSub {
+            color: lightgray;
+            font-size: 20px;
+            margin-bottom: 50px;
+        }
+
+        .tab-card {
+            margin-top: 10px;
+            border: 1px solid gray;
+            border-radius: 15px;
+            padding: 50px;
+            height: auto;
+            background-color: rgb(35, 36, 45);
+            text-align: left;
+            width: 100%;
+            max-width: 500px;
+            margin-right: 20px;
+        }
+
+        .tab-offer {
+            border: 1px solid blue;
+            border-top: 20px solid blue;
+            position: relative;
+        }
+
+        .offer {
+            position: absolute;
+            top: -20px;
+            left: 42%;
+            color: white;
+        }
+
+
+        .navtabs {
+            padding: 80px 50px;
+        }
+
+        .sub-type {
+            color: white;
+            font-size: 30px;
+            font-weight: bold;
+
+        }
+
+        .sub-amount {
+            color: white;
+            font-size: 30px;
+            font-weight: bold;
+
+        }
+
+        .sub-des {
+            font-size: 25px;
+            color: gray;
+
+        }
+
+        .btn-tab {
+            width: 100%;
+            color: white;
+            background-color: rgb(45, 51, 98);
+            border-radius: 15px;
+            padding: 5px;
+            border: none;
+            margin: 10px;
+        }
+
+        .btn-tab:hover {
+            background-color: rgb(25, 24, 41);
+            color: white;
+        }
+
+        .tab-ol {
+            color: white;
+            list-style: none;
+            font-size: 20px;
+            margin: 10px;
+        }
+
+        .tab-ol li {
+            color: gray;
+        }
+
+        .tab-ol li:before {
+            content: '✓';
+            margin-right: 5px;
+            color: rgb(152, 134, 230);
+        }
+
+
+        @media (orientation: portrait) {
+
+            .main-area {
+                flex-direction: column !important;
+                align-items: center !important;
+                justify-content: center !important;
+                text-align: center !important;
+                height: auto !important;
+                padding: 40px 20px !important;
+            }
+
+
+            .mainImgArea {
+                order: 2;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+
+            .imgBody {
+                width: 90% !important;
+                max-width: 550px !important;
+                height: auto !important;
+                border-radius: 20px;
+                margin-top: 20px;
+
+            }
+
+            .hero-content {
+                order: 1;
+                width: 100%;
+                max-width: 600px;
+            }
+
+
+            .mainFooter {
+                justify-content: center !important;
+                align-items: center !important;
+                text-align: center !important;
+                gap: 40px;
+                max-width: none !important;
+                margin: 40px auto 0 auto;
+            }
+
+            .btnHdrLogin,
+            .btnHdrBuy {
+                width: 100% !important;
+            }
+
+            .hiwCards {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .btnHiw {
+                width: 100%
+            }
+
+            .testimonials-area {
+                padding: 50px 20px;
+                margin-top: 100px;
+            }
+
+            .tab-pane {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                width: 100%;
+            }
+
+            .tab-card {
+                height: auto;
+            }
+
+
+        }
+    </style>
+</head>
+
+
+<body>
+
+
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <div class="navbar-brand ms-5">Crypto <span>Flow</span></div>
+            <button class="navbar-toggler" data-bs-target="#navbar" data-bs-toggle="collapse">
+                <span class="bi bi-list"></span>
+            </button>
+
+            <div class="navbar-collapse collapse justify-content-between" id="navbar">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a href="#" class="nav-link">Features</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">How it works</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Testimonials</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Pricings</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">FAQs</a></li>
+                </ul>
+
+                <div class="btn-header me-5">
+                    <button class="btnHdrLogin">Login</button>
+                    <button class="btnHdrBuy">Buy now</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <main>
+        <div class="main-area container-fluid">
+            <div class="hero-content">
+                <div class="hero-badge"><span>New Feature</span> AI powered Trading Signals</div>
+                <div class="hero-title"><span>Trade Crypto</span> with Confidence & Clarity</div>
+                <div class="hero-text">Experience seamless cryptocurrency trading with real-time analytics, AI-powered
+                    insights, and zero commission fees.</div>
+                <div class="hero-buttons">
+                    <button class="btn btnMainStart">Start Trading <span class="bi bi-arrow-right"></span></button>
+                    <button class="btn btnMainView">View Demo <span class="bi bi-arrow-up-right"></span></button>
+                </div>
+                <div class="mainFooter">
+                    <div class="mfTitle">$2.50B+
+                        <div class="mfSub">Trading Volume</div>
+                    </div>
+                    <div class="mfTitle">120K+
+                        <div class="mfSub">Active Traders</div>
+                    </div>
+                    <div class="mfTitle">50+
+                        <div class="mfSub">Global Markets</div>
+                    </div>
+                </div>
+            </div>
+            <div class="mainImgArea">
+                <img src="./images/cryptoImg.jpeg" alt="Trading" class="imgBody">
+            </div>
+
+
+
+        </div>
+
+    </main>
+
+
+    <section class="section-area">
+        <div class="features-section">
+            <div class="ftrTitle">Powerful Features</div>
+            <div class="ftrSub">CryptoFlow gives you the edge with advanced tools designed for both beginners and
+                professional traders.</div>
+
+            <div class="ftrRow">
+                <div class="ftrCard">
+                    <span class="bi bi-activity ftrIcon"></span>
+                    <div class="ftrCardTitle">Real-time Analytics</div>
+                    <div class="ftrCardText">Monitor market movements with advanced charts and indicators updated in
+                        real-time.</div>
+                </div>
+
+                <div class="ftrCard">
+                    <span class="bi bi-lock ftrIcon"></span>
+                    <div class="ftrCardTitle">Bank-Level Security</div>
+                    <div class="ftrCardText">Your assets are protected with top-tier encryption and secure
+                        authentication.</div>
+                </div>
+
+                <div class="ftrCard">
+                    <span class="bi bi-lightning-charge ftrIcon"></span>
+                    <div class="ftrCardTitle">Instant Execution</div>
+                    <div class="ftrCardText">Trade instantly with zero delay and maximum precision on all orders.</div>
+                </div>
+            </div>
+
+            <div class="ftrRow">
+                <div class="ftrCard">
+                    <span class="bi bi-compass ftrIcon"></span>
+                    <div class="ftrCardTitle">Smart Portfolio</div>
+                    <div class="ftrCardText">Get AI-driven recommendations to optimize your crypto investments.</div>
+                </div>
+
+                <div class="ftrCard">
+                    <span class="bi bi-graph-up ftrIcon"></span>
+                    <div class="ftrCardTitle">Price Alerts</div>
+                    <div class="ftrCardText">Never miss an opportunity with real-time notifications for major market
+                        changes.</div>
+                </div>
+
+                <div class="ftrCard">
+                    <span class="bi bi-badge-3d ftrIcon"></span>
+                    <div class="ftrCardTitle">Cloud Storage</div>
+                    <div class="ftrCardText">Access your trading data securely from anywhere, anytime.</div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="howItWorks">
+            <div class="hiwTitle">How it works</div>
+            <div class="hiwSub">Getting started with CryptoFlow is easy. Follow these simple steps to begin your crypto
+                journey.</div>
+
+
+            <div class="hiwCards">
+                <div class="hiwCard">
+                    <div class="hiwCardNumber">01</div>
+                    <span class="hiwCardIcon bi bi-download"></span>
+                    <div class="hiwCardTitle">Create Your Account</div>
+                    <div class="hiwCardSub">Sign up in minutes with our streamlined onboarding process. No complicated
+                        forms or lengthy verification.</div>
+                </div>
+
+                <div class="hiwCard">
+                    <div class="hiwCardNumber">02</div>
+                    <span class="hiwCardIcon bi bi-wallet"></span>
+                    <div class="hiwCardTitle">Fund Your Wallet</div>
+                    <div class="hiwCardSub">Easily deposit crypto or fiat through multiple payment options with zero
+                        deposit fees.</div>
+                </div>
+
+                <div class="hiwCard">
+                    <div class="hiwCardNumber">03</div>
+                    <span class="hiwCardIcon bi bi-bar-chart"></span>
+                    <div class="hiwCardTitle">Start Trading</div>
+                    <div class="hiwCardSub">Access 50+ cryptocurrencies and start trading immediately with intuitive
+                        tools and real-time data.</div>
+                </div>
+            </div>
+
+            <div class="hiwButton">
+                <button class="btn btnHiw">Create Account</button>
+            </div>
+        </div>
+
+        <div class="testimonials-area">
+            <div class="taTitle">What our users say</div>
+            <div class="taSub">Join thousands of satisfied traders who have transformed their trading experience with
+                CryptoFlow.</div>
+
+            <div class="carousel-area">
+                <div class="carousel slide" id="testimonials" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+
+                        <div class="carousel-item active">
+                            <div class="carousel-banners">
+                                <div class="carousel-reviews">
+                                    <div class="ca-ratings">
+                                        <span class="bi bi-star-fill"></span>
+                                        <span class="bi bi-star-fill"></span>
+                                        <span class="bi bi-star-fill"></span>
+                                        <span class="bi bi-star-fill"></span>
+                                        <span class="bi bi-star-fill"></span>
+                                    </div>
+                                    <div class="ca-review">"CryptoFlow has completely transformed my crypto trading
+                                        experience. The real-time analytics and AI recommendations have significantly
+                                        improved my returns."</div>
+                                    <div class="ca-profile">
+                                        <span><img src="./images/men-fashion.jpeg" alt="profile"
+                                                class="ca-image"></span>
+                                        <div>
+                                            <span class="ca-name">Micheal Chen</span>
+                                            <span class="ca-post">Full time trader</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <div class="carousel-banners">
+                                <div class="carousel-reviews">
+                                    <div class="ca-ratings">
+                                        <span class="bi bi-star-fill"></span>
+                                        <span class="bi bi-star-fill"></span>
+                                        <span class="bi bi-star-fill"></span>
+                                        <span class="bi bi-star-fill"></span>
+                                        <span class="bi bi-star-fill"></span>
+                                    </div>
+                                    <div class="ca-review">"CryptoFlow's tools make trading simple and effective, even
+                                        for beginners."</div>
+                                    <div class="ca-profile">
+                                        <span><img src="public/images/men-fashion.jpeg" alt="profile"
+                                                class="ca-image"></span>
+                                        <div>
+                                            <span class="ca-name">Sarah Lee</span>
+                                            <span class="ca-post">Part-time Trader</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <div class="carousel-banners">
+                                <div class="carousel-reviews">
+                                    <div class="ca-ratings">
+                                        <span class="bi bi-star-fill"></span>
+                                        <span class="bi bi-star-fill"></span>
+                                        <span class="bi bi-star-fill"></span>
+                                        <span class="bi bi-star-fill"></span>
+                                        <span class="bi bi-star-fill"></span>
+                                    </div>
+                                    <div class="ca-review">"The AI recommendations helped me maximize profits while
+                                        minimizing risk. Highly recommend CryptoFlow!"</div>
+                                    <div class="ca-profile">
+                                        <span><img src="public/images/men-fashion.jpeg" alt="profile"
+                                                class="ca-image"></span>
+                                        <div>
+                                            <span class="ca-name">John Doe</span>
+                                            <span class="ca-post">Full-time Trader</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#testimonials" data-bs-slide-to="0"
+                            class="active"></button>
+                        <button type="button" data-bs-target="#testimonials" data-bs-slide-to="1"></button>
+                        <button type="button" data-bs-target="#testimonials" data-bs-slide-to="2"></button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="pricing-area">
+            <div class="paTitle">Simple, Transparent Pricing</div>
+            <div class="paSub">Choose the plan that best fits your trading needs. All plans include our core platform
+                features.</div>
+
+            <div class="navtabs d-flex justify-content-center">
+                <ul class="nav nav-tabs">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link active" data-bs-toggle="tab" data-bs-target="#monthly">Monthly</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link" data-bs-toggle="tab" data-bs-target="#yearly">Yearly</a>
+                    </li>
+                </ul>
+            </div>
+
+
+            <div class="tab-content">
+
+                <div class="tab-pane active d-flex" id="monthly">
+                    <div class="tab-card">
+                        <div class="sub-type">Basic</div>
+                        <div class="sub-amount">$0</div>
+                        <div class="sub-des">Perfect for beginners getting started with crypto trading.</div>
+
+                        <button class="btn-tab">Get started</button>
+
+                        <ol class="tab-ol">Whats included:
+                            <li>Access to 20+ cryptocurrencies</li>
+                            <li>Basic charting tools</li>
+                            <li>Market data with 15-min delay</li>
+                            <li>Email support</li>
+                            <li>Mobile app access</li>
+                        </ol>
+                    </div>
+
+                    <div class="tab-card tab-offer">
+                        <div class="offer">Special Offer</div>
+                        <div class="sub-type">Basic</div>
+                        <div class="sub-amount">$0</div>
+                        <div class="sub-des">Perfect for beginners getting started with crypto trading.</div>
+
+                        <button class="btn-tab" style="background-color: rgb(65, 65, 155);">Get started</button>
+
+                        <ol class="tab-ol">Whats included:
+                            <li>Access to 20+ cryptocurrencies</li>
+                            <li>Basic charting tools</li>
+                            <li>Market data with 15-min delay</li>
+                            <li>Email support</li>
+                            <li>Mobile app access</li>
+                        </ol>
+                    </div>
+
+                    <div class="tab-card">
+                        <div class="sub-type">Basic</div>
+                        <div class="sub-amount">$0</div>
+                        <div class="sub-des">Perfect for beginners getting started with crypto trading.</div>
+
+                        <button class="btn-tab">Get started</button>
+
+                        <ol class="tab-ol">Whats included:
+                            <li>Access to 20+ cryptocurrencies</li>
+                            <li>Basic charting tools</li>
+                            <li>Market data with 15-min delay</li>
+                            <li>Email support</li>
+                            <li>Mobile app access</li>
+                        </ol>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+        </div>
+
+        <div class="faqs">
+
+        </div>
+
+
+    </section>
+</body>
+
+</html>
