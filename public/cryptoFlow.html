@@ -460,6 +460,15 @@
             margin-bottom: 50px;
         }
 
+        .tab-content>.tab-pane {
+            display: none;
+        }
+
+        .tab-content>.active {
+            display: flex !important;
+            gap: 15px;
+        }
+
         .tab-card {
             margin-top: 10px;
             border: 1px solid gray;
@@ -481,13 +490,22 @@
         .offer {
             position: absolute;
             top: -20px;
-            left: 42%;
+            left: 39%;
             color: white;
         }
 
 
         .navtabs {
             padding: 80px 50px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .nav-tabs {
+            width: 100%;
+            max-width: 250px;
+            display: flex;
+            justify-content: center;
         }
 
         .sub-type {
@@ -525,6 +543,11 @@
             color: white;
         }
 
+        .btn-tab-offer {
+            background-color: rgb(25, 24, 41);
+            color: white;
+        }
+
         .tab-ol {
             color: white;
             list-style: none;
@@ -542,6 +565,116 @@
             color: rgb(152, 134, 230);
         }
 
+        .faqs {
+            background-color: rgb(27, 31, 50);
+            height: auto;
+            padding: 80px 50px;
+        }
+
+        .faq-heading {
+            text-align: center;
+        }
+
+        .faqTitle {
+            color: rgb(152, 134, 230);
+            font-size: 40px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .faqSub {
+            color: lightgray;
+            font-size: 20px;
+            margin-bottom: 50px;
+        }
+
+        .accordion {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .accordion-item {
+            width: 100%;
+            max-width: 800px;
+            background-color: rgb(27, 31, 50);
+            border: none;
+        }
+
+        .accordion-header button {
+            width: 100%;
+            font-size: 18px;
+            border: 1px solid gray;
+        }
+
+
+        .accordion-header button:hover {
+            color: rgb(56, 56, 150) !important;
+            background-color: rgb(47, 46, 46) !important;
+        }
+
+        .footer-login {
+            padding: 80px 50px;
+            height: auto;
+            background-color: rgb(27, 31, 50);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .signup-area {
+            border: 1px solid gray;
+            border-radius: 15px;
+            padding: 20px;
+            background-color: rgb(47, 53, 83);
+            width: 100%;
+            max-width: 900px;
+        }
+
+        .flogin-title {
+            color: white;
+            font-size: 30px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .flogin-title span {
+            color: rgb(152, 134, 230);
+        }
+
+        .flogin-sub {
+            color: lightgray;
+            font-size: 20px;
+            margin-bottom: 30px;
+        }
+
+        .btnFlogin {
+            color: rgb(155, 135, 245);
+            padding: 10px;
+            font-size: 16px;
+            font-weight: bold;
+            border: 1px solid rgb(155, 135, 245);
+            background: none;
+            border-radius: 20px;
+            transition: 0.3s;
+        }
+
+        .btnFDemo {
+            color: white;
+            padding: 10px;
+            font-size: 16px;
+            font-weight: bold;
+            border: 1px solid rgb(155, 135, 245);
+            background: none;
+            border-radius: 20px;
+            transition: 0.3s;
+        }
+
+        .flogin-footer {
+            color: gray;
+            margin-top: 10px;
+        }
 
         @media (orientation: portrait) {
 
@@ -610,7 +743,8 @@
                 height: auto;
             }
 
-            .nav-tabs {
+            .nav-tab {
+                width: auto;
                 display: flex;
             }
 
@@ -619,14 +753,21 @@
                 flex-direction: column;
                 gap: 20px;
                 width: 100%;
+
             }
 
             .tab-card {
                 height: auto;
+                padding: 15px;
+                margin: none;
             }
 
             .ca-review {
                 height: auto;
+            }
+
+            .footer-login {
+                width: auto;
             }
 
         }
@@ -636,6 +777,7 @@
 
 <body>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
     <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
@@ -646,11 +788,11 @@
 
             <div class="navbar-collapse collapse justify-content-between" id="navbar">
                 <ul class="navbar-nav mx-auto">
-                    <li class="nav-item"><a href="#" class="nav-link">Features</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">How it works</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">Testimonials</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">Pricings</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">FAQs</a></li>
+                    <li class="nav-item"><a href="#features-section" class="nav-link">Features</a></li>
+                    <li class="nav-item"><a href="#how-it-works" class="nav-link">How it works</a></li>
+                    <li class="nav-item"><a href="#testimonial-area" class="nav-link">Testimonials</a></li>
+                    <li class="nav-item"><a href="#pricing-area" class="nav-link">Pricings</a></li>
+                    <li class="nav-item"><a href="#faqs-area" class="nav-link">FAQs</a></li>
                 </ul>
 
                 <div class="btn-header me-5">
@@ -697,7 +839,7 @@
 
 
     <section class="section-area">
-        <div class="features-section">
+        <div class="features-section" id="features-section">
             <div class="ftrTitle">Powerful Features</div>
             <div class="ftrSub">CryptoFlow gives you the edge with advanced tools designed for both beginners and
                 professional traders.</div>
@@ -748,7 +890,7 @@
 
 
 
-        <div class="howItWorks">
+        <div class="howItWorks" id="how-it-works">
             <div class="hiwTitle">How it works</div>
             <div class="hiwSub">Getting started with CryptoFlow is easy. Follow these simple steps to begin your crypto
                 journey.</div>
@@ -785,7 +927,7 @@
             </div>
         </div>
 
-        <div class="testimonials-area">
+        <div class="testimonials-area" id="testimonial-area">
             <div class="taTitle">What our users say</div>
             <div class="taSub">Join thousands of satisfied traders who have transformed their trading experience with
                 CryptoFlow.</div>
@@ -879,13 +1021,14 @@
 
         </div>
 
-        <div class="pricing-area">
+        <div class="pricing-area" id="pricing-area">
             <div class="paTitle">Simple, Transparent Pricing</div>
-            <div class="paSub">Choose the plan that best fits your trading needs. All plans include our core platform
-                features.</div>
+            <div class="paSub">
+                Choose the plan that best fits your trading needs. All plans include our core platform features.
+            </div>
 
-            <div class="navtabs d-flex justify-content-center">
-                <ul class="nav nav-tabs">
+            <div class="navtabs">
+                <ul class="nav nav-tabs justify-content-center">
                     <li class="nav-item">
                         <a href="#" class="nav-link active" data-bs-toggle="tab" data-bs-target="#monthly">Monthly</a>
                     </li>
@@ -895,17 +1038,14 @@
                 </ul>
             </div>
 
-
             <div class="tab-content">
 
-                <div class="tab-pane active d-flex gap-3" id="monthly">
+                <div class="tab-pane fade show active" id="monthly">
                     <div class="tab-card">
                         <div class="sub-type">Basic</div>
                         <div class="sub-amount">$0</div>
                         <div class="sub-des">Perfect for beginners getting started with crypto trading.</div>
-
-                        <button class="btn-tab">Get started</button>
-
+                        <button class="btn btn-tab">Get started</button>
                         <ol class="tab-ol">Whats included:
                             <li>Access to 20+ cryptocurrencies</li>
                             <li>Basic charting tools</li>
@@ -917,12 +1057,11 @@
 
                     <div class="tab-card tab-offer">
                         <div class="offer">Special Offer</div>
-                        <div class="sub-type">Basic</div>
-                        <div class="sub-amount">$0</div>
-                        <div class="sub-des">Perfect for beginners getting started with crypto trading.</div>
-
-                        <button class="btn-tab" style="background-color: rgb(65, 65, 155);">Get started</button>
-
+                        <div class="sub-type">Pro</div>
+                        <div class="sub-amount">$19</div>
+                        <div class="sub-des">Designed for active traders seeking advanced tools.</div>
+                        <button class="btn btn-tab" style="background-color: rgb(78, 78, 224); color: white;">Get
+                            started</button>
                         <ol class="tab-ol">Whats included:
                             <li>Access to 20+ cryptocurrencies</li>
                             <li>Basic charting tools</li>
@@ -933,12 +1072,10 @@
                     </div>
 
                     <div class="tab-card">
-                        <div class="sub-type">Basic</div>
-                        <div class="sub-amount">$0</div>
-                        <div class="sub-des">Perfect for beginners getting started with crypto trading.</div>
-
-                        <button class="btn-tab">Get started</button>
-
+                        <div class="sub-type">Enterprise</div>
+                        <div class="sub-amount">$49</div>
+                        <div class="sub-des">Comprehensive solution for professional traders.</div>
+                        <button class="btn btn-tab">Get started</button>
                         <ol class="tab-ol">Whats included:
                             <li>Access to 20+ cryptocurrencies</li>
                             <li>Basic charting tools</li>
@@ -950,12 +1087,144 @@
                 </div>
 
 
+                <div class="tab-pane fade" id="yearly">
+                    <div class="tab-card">
+                        <div class="sub-type">Basic</div>
+                        <div class="sub-amount">$0</div>
+                        <div class="sub-des">Perfect for beginners getting started with crypto trading.</div>
+                        <button class="btn btn-tab">Get started</button>
+                        <ol class="tab-ol">Whats included:
+                            <li>Access to 20+ cryptocurrencies</li>
+                            <li>Basic charting tools</li>
+                            <li>Market data with 15-min delay</li>
+                            <li>Email support</li>
+                            <li>Mobile app access</li>
+                        </ol>
+                    </div>
+
+                    <div class="tab-card tab-offer">
+                        <div class="offer">Special Offer</div>
+                        <div class="sub-type">Pro</div>
+                        <div class="sub-amount">$15</div>
+                        <div class="sub-des">Designed for active traders seeking advanced tools.</div>
+                        <button class="btn btn-tab" style="background-color: rgb(72, 72, 221); color: white;">Get
+                            started</button>
+                        <ol class="tab-ol">Whats included:
+                            <li>Access to 20+ cryptocurrencies</li>
+                            <li>Basic charting tools</li>
+                            <li>Market data with 15-min delay</li>
+                            <li>Email support</li>
+                            <li>Mobile app access</li>
+                        </ol>
+                    </div>
+
+                    <div class="tab-card">
+                        <div class="sub-type">Enterprise</div>
+                        <div class="sub-amount">$39</div>
+                        <div class="sub-des">Comprehensive solution for professional traders.</div>
+                        <button class="btn btn-tab">Get started</button>
+                        <ol class="tab-ol">Whats included:
+                            <li>Access to 20+ cryptocurrencies</li>
+                            <li>Basic charting tools</li>
+                            <li>Market data with 15-min delay</li>
+                            <li>Email support</li>
+                            <li>Mobile app access</li>
+                        </ol>
+                    </div>
+                </div>
+
             </div>
         </div>
         </div>
 
-        <div class="faqs">
+        <div class="faqs" id="faqs-area">
+            <div class="faq-heading">
+                <div class="faqTitle">Frequently Asked Questions</div>
+                <div class="faqSub">Got questions about CryptoFlow? We've got answers. If you don't see what you're
+                    looking
+                    for, reach out to our support team.</div>
+            </div>
 
+            <div class="accordion" id="faqs">
+
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <button class="btn bg-dark text-white text-center" data-bs-target="#q1"
+                            data-bs-toggle="collapse">How secure is cryptoflow?</button>
+                    </div>
+                    <div class="accordion-collapse collapse bg-dark text-secondary" id="q1" data-bs-parent="#faqs">
+                        <div class="accordion-body">
+                            <p>CryptoFlow employs bank-level security measures including 256-bit encryption, cold
+                                storage for 95% of assets, two-factor authentication, and regular security audits.
+                                Our platform has never been compromised and we maintain a comprehensive insurance
+                                policy to protect user funds.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <button class="btn bg-dark text-white text-center" data-bs-target="#q2"
+                            data-bs-toggle="collapse">What cryptocurrencies can i trade on
+                            cryptoflow?</button>
+                    </div>
+                    <div class="accordion-collapse collapse bg-dark text-secondary" id="q2" data-bs-parent="#faqs">
+                        <div class="accordion-body">
+                            <p>CryptoFlow supports trading of over 50 cryptocurrencies, including Bitcoin (BTC),
+                                Ethereum (ETH), Solana (SOL), Cardano (ADA), Ripple (XRP), and many more. We
+                                regularly add new cryptocurrencies based on market trends and user demand.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <button class="btn btn-dark text-white text-center" data-bs-target="#q3"
+                            data-bs-toggle="collapse">What are the fees for using
+                            cryptoflow?</button>
+                    </div>
+                    <div class="accordion-collapse collapse bg-dark text-secondary" id="q3" data-bs-parent="#faqs">
+                        <div class="accordion-body">
+                            <p>Our fee structure is transparent and competitive. Basic accounts pay 0.25% per trade,
+                                Pro accounts pay 0.1%, and Enterprise accounts pay no trading fees. There are no
+                                hidden fees, and we don't charge for deposits. Withdrawal fees vary by
+                                cryptocurrency to cover network costs.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <button class="btn bg-dark text-white text-center" data-bs-target="#q4"
+                            data-bs-toggle="collapse">Is cryptoflow available in my country?</button>
+                    </div>
+                    <div class="accordion-collapse collapse bg-dark text-secondary" id="q4" data-bs-parent="#faqs">
+                        <div class="accordion-body">
+                            <p>CryptoFlow is available in over 140 countries worldwide. However, due to regulatory
+                                constraints, we cannot serve users from certain jurisdictions. Please check our Terms of
+                                Service or contact our support team to verify availability in your specific location.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="footer-login">
+            <div class="signup-area text-center">
+                <div class="flogin-title">Ready to revolutionize your <span>crypto trading?</span></div>
+                <div class="flogin-sub">Join thousands of traders who have already upgraded their crypto experience with
+                    CryptoFlow. Start
+                    today with zero risk.</div>
+                <div>
+                    <button class="btn btn-dark btnFlogin">Get started for free <span
+                            class="bi bi-arrow-right"></span></button>
+                    <button class="btn btn-dark btnFDemo">Schedule demo</button>
+                </div>
+
+                <div class="flogin-footer">No credit card required. Cancel anytime.</div>
+            </div>
         </div>
 
 
