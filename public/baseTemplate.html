@@ -287,7 +287,7 @@
 
         /* Team Info */
         .team-info {
-            background-color: rgb(244, 240, 240);
+            background-color: rgb(245, 248, 251);
             position: relative;
             padding-bottom: 80px;
         }
@@ -358,7 +358,191 @@
             font-size: 17px;
         }
 
-        /* --------- Responsive Adjustments ---------- */
+
+        /*Service area*/
+        .sa-text {
+            text-align: center;
+            max-width: 800px;
+            margin: 20px auto 60px;
+        }
+
+        .sa-title {
+            font-weight: bold;
+            font-size: 45px;
+            margin-bottom: 10px;
+            padding-top: 120px;
+        }
+
+        .sa-sub {
+            color: gray;
+            font-size: 20px;
+        }
+
+        .sa-row {
+            display: grid;
+            grid-template-columns: 4fr 4fr 4fr;
+            gap: 60px;
+            margin-bottom: 80px;
+        }
+
+        .sa-icon {
+            font-size: 30px;
+            color: rgb(65, 105, 225);
+            margin-bottom: 25px;
+        }
+
+        .sa-card-title {
+            font-size: 25px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .sa-card-sub {
+            font-size: 18px;
+            color: gray;
+        }
+
+        .sa-col {
+            padding: 25px;
+        }
+
+        .sa-col:hover {
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        }
+
+
+        /*Pricing Area*/
+        .pricing-area {
+            background-color: rgb(245, 248, 251);
+            position: relative;
+        }
+
+        .bi-water {
+            color: palevioletred;
+            font-size: 60px;
+            position: absolute;
+            top: 200px;
+            right: 200px;
+        }
+
+        .bi-circle-half {
+            color: yellow;
+            font-size: 60px;
+            position: absolute;
+            top: 30px;
+            left: 100px;
+        }
+
+        .pa-text {
+            text-align: center;
+            max-width: 800px;
+            margin: 20px auto 60px;
+        }
+
+        .pa-title {
+            font-weight: bold;
+            font-size: 45px;
+            margin-bottom: 10px;
+            padding-top: 120px;
+        }
+
+        .pa-sub {
+            color: gray;
+            font-size: 20px;
+        }
+
+        #monthly {
+            display: grid;
+            grid-template-columns: 4fr 4fr 4fr;
+            gap: 60px;
+            padding: 30px;
+            padding: 20px 120px;
+        }
+
+        #yearly {
+            display: grid;
+            grid-template-columns: 4fr 4fr 4fr;
+            gap: 60px;
+            padding: 30px;
+            padding: 20px 120px;
+        }
+
+        .tab-content {
+            position: relative;
+            min-height: 400px;
+            /* adjust to the height of your pricing cards */
+        }
+
+        .tab-content>.tab-pane {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.4s ease;
+        }
+
+        .tab-content>.tab-pane.active.show {
+            position: relative;
+            opacity: 1;
+            visibility: visible;
+        }
+
+
+        .tab-card {
+            height: auto;
+            background-color: white;
+            border-radius: 10px;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .sub-type {
+            font-size: 20px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            margin-bottom: 30px;
+        }
+
+        .sub-amount {
+            font-size: 15px;
+        }
+
+        .p-amount {
+            font-weight: bold;
+            font-size: 40px;
+        }
+
+        .sub-des {
+            color: gray;
+            margin-bottom: 20px;
+        }
+
+        .pa-btn {
+            background-color: palevioletred;
+            border-radius: 40px;
+            padding: 10px;
+            color: white;
+            font-weight: bold;
+            width: 100%;
+            max-width: 150px;
+            margin-bottom: 30px;
+        }
+
+        .pa-btn:hover {
+            background-color: rgb(0, 102, 255);
+            color: white;
+        }
+
+
+
+        .sub-benifit {
+            display: block;
+            color: gray;
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
 
         /* Tablets (≤ 992px) */
         @media (max-width: 992px) {
@@ -388,6 +572,14 @@
             }
 
             .team-title {
+                font-size: 35px;
+            }
+
+            .sa-title {
+                font-size: 35px;
+            }
+
+            .pa-title {
                 font-size: 35px;
             }
         }
@@ -530,6 +722,38 @@
                 right: 5px;
             }
 
+            .sa-row {
+                display: block;
+                gap: 20px;
+            }
+
+            .sa-title {
+                font-size: 25px;
+            }
+
+            .sa-sub {
+                font-size: 20px;
+            }
+
+            .pa-title {
+                font-size: 25px;
+            }
+
+            .pa-sub {
+                font-size: 20px;
+            }
+
+            .tab-card {
+                padding: 10px 20px;
+                margin-bottom: 30px;
+                height: auto;
+            }
+
+            #monthly,
+            #yearly {
+                display: block;
+                padding: 10px 20px;
+            }
         }
     </style>
 </head>
@@ -548,7 +772,7 @@
                 <div class="collapse navbar-collapse justify-content-between" id="navbar">
                     <ul class="navbar-nav mx-auto">
                         <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
-                        <li class="nav-item"><a href="#" class="nav-link">Features</a></li>
+                        <li class="nav-item"><a href="#why-us" class="nav-link">Features</a></li>
                         <li class="nav-item"><a href="#" class="nav-link">Pages</a></li>
                         <li class="nav-item"><a href="#" class="nav-link">Support</a></li>
                     </ul>
@@ -612,7 +836,7 @@
 
 
     <section>
-        <div class="why-us">
+        <div class="why-us" id="why-us">
             <div class="section-imgs">
                 <div class="img-stack-one">
                     <img src="images/base-sec-img1.jpg" alt="" class="sec-img">
@@ -671,6 +895,176 @@
         </div>
 
         <div class="service area">
+
+            <div class="sa-text">
+                <div class="sa-title">We offer the best quality service for you.</div>
+                <div class="sa-sub">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor eros.
+                    Donec
+                    vitae tortor lacus. Phasellus aliquam ante in maximus.</div>
+            </div>
+
+            <div class="sa-cards">
+                <div class="sa-row">
+                    <div class="sa-col">
+                        <div class="bi bi-bar-chart-line-fill sa-icon"></div>
+                        <div class="sa-card-title">Crafted for Startups</div>
+                        <div class="sa-card-sub">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis
+                            tortor.</div>
+                    </div>
+
+                    <div class="sa-col">
+                        <div class="bi bi-layers-fill sa-icon"></div>
+                        <div class="sa-card-title">High-quality Design</div>
+                        <div class="sa-card-sub">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis
+                            tortor.</div>
+                    </div>
+
+                    <div class="sa-col">
+                        <div class="bi bi-file-earmark-bar-graph-fill sa-icon"></div>
+                        <div class="sa-card-title">All Essential Sections</div>
+                        <div class="sa-card-sub">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis
+                            tortor.</div>
+                    </div>
+
+                </div>
+
+                <div class="sa-row">
+                    <div class="sa-col">
+                        <div class="bi bi-speedometer2 sa-icon"></div>
+                        <div class="sa-card-title">Speed Optimized</div>
+                        <div class="sa-card-sub">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis
+                            tortor.</div>
+                    </div>
+
+                    <div class="sa-col">
+                        <div class="bi bi-stack-overflow sa-icon"></div>
+                        <div class="sa-card-title">Fully Customizable</div>
+                        <div class="sa-card-sub">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis
+                            tortor.</div>
+                    </div>
+
+                    <div class="sa-col">
+                        <div class="bi bi-calendar2-week-fill sa-icon"></div>
+                        <div class="sa-card-title">Regular Updates</div>
+                        <div class="sa-card-sub">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis
+                            tortor.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="pricing-area">
+            <div class="bi bi-water"></div>
+            <div class="bi bi-circle-half"></div>
+            <div class="pa-text">
+                <div class="pa-title">We Offer Great Affordable Premium Prices.</div>
+                <div class="pa-sub">It is a long established fact that a reader will be distracted by the readable
+                    content of a page when looking at its layout. The point of using.</div>
+            </div>
+
+            <div class="navtabs">
+                <ul class="nav nav-tabs justify-content-center">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link active" data-bs-toggle="tab" data-bs-target="#monthly">Monthly</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link" data-bs-toggle="tab" data-bs-target="#yearly">Yearly</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="tab-content">
+
+                <div class="tab-pane fade show active" id="monthly">
+                    <div class="tab-card">
+                        <div class="sub-type">Starter</div>
+                        <div class="sub-amount"><span class="p-amount">$29</span>/per month</div>
+                        <div class="sub-des">No credit card required</div>
+
+                        <button class="btn pa-btn">Try for free</button>
+
+                        <span class="sub-benifit">400 GB storage</span>
+                        <span class="sub-benifit">Unlimited Photos and Videos</span>
+                        <span class="sub-benifit">Exclusive Support</span>
+
+                        <div>7 day free trial</div>
+                    </div>
+
+                    <div class="tab-card">
+                        <div class="sub-type">Growth Plan</div>
+                        <div class="sub-amount"><span class="p-amount">$59</span>/per month</div>
+                        <div class="sub-des">No credit card required</div>
+
+                        <button class="btn pa-btn bg-primary">Try for free</button>
+
+                        <span class="sub-benifit">400 GB storage</span>
+                        <span class="sub-benifit">Unlimited Photos and Videos</span>
+                        <span class="sub-benifit">Exclusive Support</span>
+
+                        <div>7 day free trial</div>
+                    </div>
+
+                    <div class="tab-card">
+                        <div class="sub-type">Business</div>
+                        <div class="sub-amount"><span class="p-amount">$139</span>/per month</div>
+                        <div class="sub-des">No credit card required</div>
+
+                        <button class="btn pa-btn">Try for free</button>
+
+                        <span class="sub-benifit">400 GB storage</span>
+                        <span class="sub-benifit">Unlimited Photos and Videos</span>
+                        <span class="sub-benifit">Exclusive Support</span>
+
+                        <div>7 day free trial</div>
+                    </div>
+                </div>
+
+
+                <div class="tab-pane fade" id="yearly">
+                    <div class="tab-card">
+                        <div class="sub-type">Starter</div>
+                        <div class="sub-amount"><span class="p-amount">$149</span>/per year</div>
+                        <div class="sub-des">No credit card required</div>
+
+                        <button class="btn pa-btn">Try for free</button>
+
+                        <span class="sub-benifit">400 GB storage</span>
+                        <span class="sub-benifit">Unlimited Photos and Videos</span>
+                        <span class="sub-benifit">Exclusive Support</span>
+
+                        <div>7 day free trial</div>
+                    </div>
+
+                    <div class="tab-card">
+                        <div class="sub-type">Growth Plan</div>
+                        <div class="sub-amount"><span class="p-amount">$608</span>/per year</div>
+                        <div class="sub-des">No credit card required</div>
+
+                        <button class="btn pa-btn bg-primary">Try for free</button>
+
+                        <span class="sub-benifit">400 GB storage</span>
+                        <span class="sub-benifit">Unlimited Photos and Videos</span>
+                        <span class="sub-benifit">Exclusive Support</span>
+
+                        <div>7 day free trial</div>
+                    </div>
+
+                    <div class="tab-card">
+                        <div class="sub-type">Business</div>
+                        <div class="sub-amount"><span class="p-amount">$1568</span>/per year</div>
+                        <div class="sub-des">No credit card required</div>
+
+                        <button class="btn pa-btn">Try for free</button>
+
+                        <span class="sub-benifit">400 GB storage</span>
+                        <span class="sub-benifit">Unlimited Photos and Videos</span>
+                        <span class="sub-benifit">Exclusive Support</span>
+
+                        <div>7 day free trial</div>
+                    </div>
+                </div>
+
+            </div>
 
         </div>
 
