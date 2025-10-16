@@ -663,6 +663,72 @@
             color: black;
         }
 
+        /*Blogs area*/
+
+        .blogs-area {}
+
+        .ba-text {
+            text-align: center;
+            max-width: 800px;
+            margin: 20px auto 60px;
+        }
+
+        .ba-title {
+            font-weight: bold;
+            font-size: 45px;
+            margin-bottom: 10px;
+            padding-top: 120px;
+        }
+
+        .ba-sub {
+            color: gray;
+            font-size: 20px;
+        }
+
+        .ba-img {
+            width: 100%;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+        }
+
+        .ba-cards {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            padding: none;
+        }
+
+        .ba-card {
+            width: 400px;
+            height: auto;
+            border-radius: 15px;
+            border: 1px solid lightgray;
+
+        }
+
+        .ba-card-head {
+            font-size: 17px;
+            color: gray;
+            margin-right: 15px;
+        }
+
+        .ba-card-text {
+            padding: 25px;
+        }
+
+        .ba-card-title {
+            margin-top: 15px;
+            font-size: 25px;
+            font-weight: bold;
+            transition-duration: 0.5s;
+        }
+
+        .ba-card-title:hover {
+            color: blue;
+            cursor: pointer;
+            transition-duration: 0.3s;
+        }
+
 
         /* Tablets (≤ 992px) */
         @media (max-width: 992px) {
@@ -949,6 +1015,25 @@
                 font-size: 80px;
                 color: palevioletred;
                 animation: rotate 20s linear infinite;
+            }
+
+            .ba-title {
+                font-size: 25px;
+            }
+
+            .ba-sub {
+                font-size: 20px;
+            }
+
+            .ba-card {
+                width: 100%;
+            }
+
+            .ba-cards {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+
             }
         }
     </style>
@@ -1380,6 +1465,63 @@
 
             <div class="c-text">
                 <div class="c-num">346</div>Families
+            </div>
+        </div>
+
+        <div class="blogs-area">
+            <div class="ba-text">
+                <div class="ba-title">Latest Blogs and News</div>
+                <div class="ba-sub">It is a long established fact that a reader will be distracted by the readable
+                    content of a page when looking at its layout. The point of using.</div>
+            </div>
+
+            <div class="ba-cards">
+                <div class="ba-card">
+                    <div class="card-header">
+                        <img src="images/base-ba-img1.jpg" alt="" class="ba-img">
+                    </div>
+
+                    <div class="ba-card-body">
+                        <div class="ba-card-text">
+                            <span class="ba-card-head"><span class="bi bi-person">Musharof Chy</span></span>
+                            <span class="ba-card-head"><span class="bi bi-calendar">25 Dec, 2025</span></span>
+
+                            <div class="ba-card-title">Free advertising for your online business</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ba-card">
+                    <div class="card-header">
+                        <img src="images/base-ba-img2.jpg" alt="" class="ba-img">
+                    </div>
+
+                    <div class="ba-card-body">
+                        <div class="ba-card-text">
+                            <span class="ba-card-head"><span class="bi bi-person">Musharof Chy</span></span>
+                            <span class="ba-card-head"><span class="bi bi-calendar">25 Dec, 2025</span></span>
+
+                            <div class="ba-card-title">Tips to quickly improve your coding speed.</div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="ba-card">
+                    <div class="card-header">
+                        <img src="images/base-ba-img3.jpg" alt="" class="ba-img">
+                    </div>
+
+                    <div class="ba-card-body">
+                        <div class="ba-card-text">
+                            <span class="ba-card-head"><span class="bi bi-person">Musharof Chy</span></span>
+                            <span class="ba-card-head"><span class="bi bi-calendar">25 Dec, 2025</span></span>
+
+                            <div class="ba-card-title">9 simple ways to improve your design skills</div>
+                        </div>
+                    </div>
+
+                </div>
             </div>
         </div>
 
