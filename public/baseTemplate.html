@@ -727,6 +727,135 @@
             transition-duration: 0.3s;
         }
 
+        /*Form area*/
+        .form-area {
+            background-color: rgb(245, 248, 251);
+            margin-top: 100px;
+            height: auto;
+        }
+
+        .fa-text {
+            text-align: center;
+            max-width: 800px;
+            margin: 20px auto 60px;
+        }
+
+        .fa-title {
+            font-weight: bold;
+            font-size: 45px;
+            margin-bottom: 10px;
+            padding-top: 120px;
+        }
+
+        .fa-sub {
+            color: gray;
+            font-size: 20px;
+        }
+
+        .row {
+            margin-bottom: 30px;
+        }
+
+        .forms {
+            display: grid;
+            grid-template-columns: 3.5fr 7.5fr;
+            gap: 30px;
+            height: auto;
+            padding: 0px 120px 20px 120px;
+        }
+
+        .form-sec {
+            border-radius: 10px;
+            background-color: white;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            position: relative;
+        }
+
+        .form-sec-water {
+            color: palevioletred;
+            font-size: 30px;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+
+        .form-sec-text {
+            margin-top: 35px;
+        }
+
+        .form-sec-title {
+            font-size: 20px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: 500;
+        }
+
+        .form-sec-sub {
+            color: gray;
+            font-size: 17px;
+        }
+
+        .form-sec-border {
+            border-bottom: 2px solid lightblue;
+        }
+
+        .form-sec-icons span {
+            color: gray;
+            margin: 15px;
+            font-size: 20px;
+        }
+
+        .form-main {
+            padding: 40px;
+            background-color: white;
+            border-radius: 10px;
+            position: relative;
+        }
+
+        .form-main-water {
+            color: palevioletred;
+            font-size: 60px;
+            position: absolute;
+            top: -100px;
+            right: 60px;
+
+        }
+
+        .form-main label {
+            color: gray;
+            margin-bottom: 20px;
+            font-weight: 450;
+            font-size: 18px;
+        }
+
+        .form-main input {
+            box-shadow: rgba(231, 231, 235, 0.2) 0px 0px 20px 7px !important;
+        }
+
+        .form-main textarea {
+            box-shadow: rgba(231, 231, 235, 0.2) 0px 0px 20px 7px !important;
+        }
+
+        input::placeholder {
+            color: lightgray !important;
+            font-size: 15px;
+        }
+
+        textarea::placeholder {
+            color: lightgray !important;
+            font-size: 15px;
+        }
+
+        .form-btn {
+            color: white;
+            font-size: 17px;
+            background-color: rgb(0, 102, 255);
+            border-radius: 20px;
+            padding: 10px;
+            margin-top: 20px;
+        }
 
         /* Tablets (≤ 992px) */
         @media (max-width: 992px) {
@@ -1032,6 +1161,43 @@
                 flex-direction: column;
                 gap: 15px;
             }
+
+            .fa-title {
+                font-size: 25px;
+            }
+
+            .fa-sub {
+                font-size: 20px;
+            }
+
+            .forms {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                width: 100%;
+                padding: 0px 10px 20px 10px;
+            }
+
+            .form-sec {
+                order: 2;
+            }
+
+            .form-main {
+                order: 1;
+                padding: 15px;
+            }
+
+            .row {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .col {
+                margin-bottom: 15px;
+            }
+
+
         }
     </style>
 </head>
@@ -1522,6 +1688,89 @@
             </div>
         </div>
 
+        <div class="form-area">
+            <div class="fa-text">
+                <div class="fa-title">Let’s Stay Connected</div>
+                <div class="fa-sub">It is a long established fact that a reader will be distracted by the readable
+                    content of a page when looking at its layout. The point of using.</div>
+            </div>
+
+            <div class="forms">
+                <div class="form-sec">
+                    <div class="bi bi-water form-sec-water"></div>
+                    <div class="form-sec-text">
+                        <div class="form-sec-title">Email Address</div>
+                        <div class="form-sec-sub">support@startup.com</div>
+                    </div>
+
+                    <div class="form-sec-text">
+                        <div class="form-sec-title">Office Location</div>
+                        <div class="form-sec-sub">76/A, Green valle, Califonia USA.</div>
+                    </div>
+
+                    <div class="form-sec-text">
+                        <div class="form-sec-title">Phone Number</div>
+                        <div class="form-sec-sub">+009 8754 3433 223</div>
+                    </div>
+
+                    <div class="form-sec-text">
+                        <div class="form-sec-title">Skype Email</div>
+                        <div class="form-sec-sub">example@yourmail.com</div>
+                    </div>
+
+                    <div class="form-sec-border"></div>
+
+                    <div class="form-sec-title">Social Media</div>
+
+                    <div class="form-sec-icons">
+                        <span class="bi bi-facebook"></span>
+                        <span class="bi bi-twitter"></span>
+                        <span class="bi bi-tiktok"></span>
+                        <span class="bi bi-skype"></span>
+                    </div>
+
+
+
+                </div>
+
+                <div class="form-main">
+                    <div class="bi bi-water form-main-water"></div>
+                    <div class="row">
+                        <div class="col">
+                            <label for="full-name">Full name</label>
+                            <input type="text" name="fullname" id="fullname" class="form-control"
+                                placeholder="Nimes Sanjel">
+                        </div>
+                        <div class="col">
+                            <label for="email">Email address</label>
+                            <input type="email" name="email" id="email" class="form-control"
+                                placeholder="someone@gmail.com">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <label for="phone">Phone number</label>
+                            <input type="number" name="phone" id="phone" class="form-control"
+                                placeholder="+9770987654321">
+                        </div>
+                        <div class="col">
+                            <label for="subject">Type your subject</label>
+                            <input type="text" name="subject" id="subject" class="form-control"
+                                placeholder="Web development">
+                        </div>
+                    </div>
+
+                    <label for="message">Message</label>
+                    <textarea name="message" id="message" class="form-control" rows="7"
+                        placeholder="Message"></textarea>
+
+                    <button class="btn form-btn">Send Message</button>
+                </div>
+            </div>
+
+
+        </div>
     </section>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
