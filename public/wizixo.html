@@ -401,42 +401,27 @@
 
 
         @media (orientation: portrait) {
-
-            /* General reset for mobile */
-            * {
-                max-width: 100%;
-                overflow-x: hidden;
-            }
-
-            body {
-                overflow-x: hidden;
-            }
-
-            header {
-                width: 100%;
-            }
-
             .hdr-logo {
                 margin-left: 10px;
-                width: 120px;
-                height: auto;
             }
 
             .hdr-nav-items {
                 position: unset;
-                right: auto;
             }
 
             main {
                 background-image: url(images/cryptoImg.jpeg);
-                background-size: cover;
-                background-position: center;
-                padding: 0px 20px;
+                background-size: 500px;
+                padding: 0px 20px 20px 20px;
                 height: auto;
             }
 
             .main-area {
                 padding-top: 50px;
+            }
+
+            .main-vid-time {
+                color: white;
             }
 
             .main-sub {
@@ -446,69 +431,57 @@
             }
 
             .main-title {
-                font-size: 38px;
-                line-height: 45px;
-                word-wrap: break-word;
-            }
-
-            .main-vid-time {
-                color: white;
+                font-size: 40px;
             }
 
             .main-footer {
                 background-color: rgb(76, 189, 137);
-                position: relative;
-                bottom: 0;
-                width: 100%;
+                position: absolute;
+                bottom: -120px;
+                width: auto;
                 display: flex;
                 flex-direction: column;
-                align-items: center;
                 gap: 10px;
-                padding: 15px;
+                padding: 5px 5px 5px 5px;
+                margin-right: 20px;
                 border-radius: 5px;
-                box-sizing: border-box;
             }
 
             .main-ftr-text {
                 font-weight: 500;
-                font-size: 18px;
+                font-size: 20px;
                 text-align: center;
-                width: 100%;
             }
 
             .main-ftr-btn {
-                padding: 6px 12px;
+                padding: 3px;
                 font-size: 15px;
             }
 
-            .fixed-btn,
-            .fixed-btn1 {
-                top: 92%;
-                transform: scale(0.9);
-            }
-
             .fixed-btn {
-                right: 90px;
+                top: 94%;
+                right: 150px;
             }
 
             .fixed-btn1 {
-                right: 20px;
+                top: 94%;
+                right: 30px;
             }
 
             section {
-                padding: 0px 15px;
+                padding: 0px 20px 0px 20px;
                 height: auto;
             }
 
             .pur-area {
                 display: flex;
                 flex-direction: column;
-                gap: 30px;
-                padding: 80px 0 0 0;
+                gap: 20px;
+                padding: 100px 5px 0px 5px;
             }
 
             .pur-title1 {
-                font-size: 22px;
+                font-size: 20px;
                 font-weight: 500;
                 line-height: 30px;
             }
@@ -522,73 +495,72 @@
                 font-size: 13px;
             }
 
-            /* Fix for images overflowing */
             .pur-img {
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: center;
-                align-items: center;
-                gap: 10px;
-                margin: 0 auto;
-                width: 100%;
-                overflow-x: hidden;
+                gap: 5px;
+                margin-right: 20px;
             }
 
-            .pur-img img {
-                width: 100%;
-                max-width: 170px;
-                height: auto;
+            .pur-img1 {
+                height: 120px;
+                width: 180px;
+                border-radius: 15px;
+            }
+
+            .pur-img3 {
+                width: 170px;
+                margin-top: 45px;
+                border-radius: 15px;
+            }
+
+            .pur-img2 {
+                width: 170px;
+                height: 120px;
+                border-radius: 15px;
+            }
+
+            .pur-img4 {
+                width: 170px;
+                height: 90px;
                 border-radius: 15px;
             }
 
             .pur-cards {
                 display: flex;
                 flex-direction: column;
-                gap: 25px;
+                gap: 30px;
             }
 
             .pur-article {
                 font-size: 18px;
                 text-align: center;
                 border-radius: 5px;
-                padding: 20px;
-                word-wrap: break-word;
             }
 
             .creative-area {
                 display: flex;
                 flex-direction: column;
                 gap: 30px;
-                margin-top: 50px;
             }
 
             .cr-count {
-                padding: 0 30px;
+                padding: 0px 30px 0px 30px;
             }
 
             .cr-count-num {
-                font-size: 25px;
+                font-size: 20px;
             }
 
             .cr-count-text {
-                font-size: 14px;
+                font-size: 17px;
             }
 
             .cr-col {
-                font-size: 12px;
+                font-size: 13px;
                 margin-right: 10px;
             }
 
             .cr-img {
-                height: auto;
-                width: 100%;
-                border-radius: 10px;
-            }
-
-            .cr-img-txt {
-                left: 10px;
-                bottom: 20px;
-                font-size: 14px;
+                height: 400px;
             }
         }
     </style>
