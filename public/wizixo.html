@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wizixo | Creative Multipurpose Website | Nimes Sanjel</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+
+
+    <style>
+        /*header*/
+        header {
+            height: 70px;
+            position: sticky;
+            top: 0;
+            background-color: white;
+            z-index: 10;
+        }
+
+        .hdr-logo {
+            height: 50px;
+            width: 150px;
+            margin-left: 130px;
+        }
+
+        .hdr-nav-items {
+            position: fixed;
+            right: 150px;
+        }
+
+        .nav-item {
+            margin-right: 20px;
+            font-size: 15px;
+            color: rgb(243, 243, 243);
+            font-weight: 500;
+        }
+
+        .nav-link:hover {
+            color: #64e37d;
+        }
+
+        .hdr-btn {
+            background-image: linear-gradient(45deg, #64e37d 10%, #42c2db);
+            color: white;
+            font-weight: 500;
+            font-size: 17px;
+            padding: 5px;
+            width: 100px;
+        }
+
+        .hdr-btn:hover {
+            background-image: linear-gradient(90deg, #64e37d 50%, #42c2db);
+            color: white;
+        }
+
+        /*main*/
+        main {
+            height: 100vh;
+            background-image: url(images/wzixo_main.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            padding: 0px 150px 0px 150px;
+            position: relative;
+        }
+
+        .fixed-btn {
+            position: fixed;
+            top: 93vh;
+            right: 70px;
+            z-index: 10;
+            background-color: rgb(162, 23, 23);
+            color: white;
+            font-weight: 500;
+        }
+
+        .fixed-btn:hover {
+            background-color: rgb(130, 20, 20);
+        }
+
+        .fixed-btn1 {
+            position: fixed;
+            top: 93vh;
+            right: 15px;
+            z-index: 10;
+            background-image: linear-gradient(90deg, #64e37d 10%, #42c2db);
+            color: white;
+            font-weight: 500;
+        }
+
+        .fixed-btn1:hover {
+            background-image: linear-gradient(90deg, #64e37d 60%, #42c2db);
+        }
+
+        .main-area {
+            padding-top: 230px;
+        }
+
+        .main-sub {
+            font-size: 20px;
+            font-weight: 400;
+            margin-bottom: 10px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        .main-title {
+            width: 100%;
+            max-width: 700px;
+            font-size: 60px;
+            line-height: 65px;
+            font-weight: bold;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .main-vid {
+            margin-top: 20px;
+            display: inline-flex;
+        }
+
+        .bi-play {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: linear-gradient(90deg, #64e37d 15%, #42c2db 100%);
+            font-size: 30px;
+            height: 40px;
+            width: 40px;
+            padding: 6px;
+            border-radius: 100%;
+            transition-duration: 0.3s;
+        }
+
+        .bi-play:hover {
+            transform: scale(1.3);
+            cursor: pointer;
+            transition-duration: 0.3s;
+            background-image: linear-gradient(90deg, #64e37d 20%, #42c2db 80%);
+        }
+
+        .main-vid-time {
+            color: gray;
+            margin-top: 6px;
+            margin-left: 10px;
+        }
+
+        .main-footer {
+            position: absolute;
+            bottom: -40px;
+            background-color: rgb(76, 189, 137);
+            width: 1200px;
+            height: 130px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0px 50px 0px 50px;
+        }
+
+        .main-ftr-text {
+            font-size: 25px;
+            color: white;
+            font-weight: 500;
+        }
+
+        .main-ftr-btn {
+            background-color: white;
+            padding: 10px;
+        }
+
+        .main-ftr-btn:hover {
+            background-color: lightgray;
+        }
+
+        /*section*/
+        section {
+            padding: 150px 150px 0px 150px;
+            height: auto;
+        }
+
+        /*purchase*/
+        .pur-area {
+            display: grid;
+            grid-template-columns: 7fr 5fr;
+            gap: 100px;
+        }
+
+        .pur-text {
+            padding-top: 60px;
+        }
+
+        .pur-title1 {
+            font-size: 35px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            width: 100%;
+            max-width: 400px;
+            font-weight: 300;
+            line-height: 40px;
+        }
+
+        .pur-title2 {
+            font-size: 20px;
+            margin-top: 20px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        .pur-sub {
+            color: gray;
+        }
+
+        .pur-btn {
+            background-image: linear-gradient(90deg, #64e37d 15%, #42c2db);
+            color: white;
+            font-weight: bold;
+            padding: 10px;
+            margin-top: 20px;
+        }
+
+        .pur-btn:hover {
+            background-image: linear-gradient(90deg, #64e37d 50%, #42c2db);
+            color: white;
+        }
+
+        .pur-img {
+            display: flex;
+            gap: 10px;
+        }
+
+        .pur-img1 {
+            height: 200px;
+            width: 300px;
+            border-radius: 15px;
+        }
+
+        .pur-img3 {
+            width: 270px;
+            margin-top: 45px;
+            border-radius: 15px;
+        }
+
+        .pur-img2 {
+            width: 250px;
+            height: 200px;
+            margin-bottom: 100px;
+            margin-left: 50px;
+            border-radius: 15px;
+        }
+
+        .pur-img4 {
+            width: 250px;
+            height: 170px;
+            border-radius: 15px;
+            margin-bottom: 40px;
+        }
+
+        .pur-cards {
+            display: grid;
+            grid-template-columns: 3fr 3fr 3fr 3fr;
+            gap: 15px;
+        }
+
+        .pur-card-count {
+            color: #3f9751;
+            font-weight: 500;
+        }
+
+        .pur-card-title {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size: 20px;
+            margin-bottom: 8px;
+        }
+
+        .pur-card-text {
+            color: gray;
+            font-size: 15px;
+            margin-bottom: 15px;
+        }
+
+        .pur-card-foot span {
+            display: block;
+            font-size: 15px;
+            color: gray;
+            font-weight: bold;
+        }
+
+        .pur-article {
+            margin-top: 60px;
+            font-size: 25px;
+            color: white;
+            padding: 50px 40px 50px 40px;
+        }
+
+        /*creative area*/
+        .creative-area {
+            display: grid;
+            grid-template-columns: 7fr 5fr;
+            gap: 10px;
+            margin-top: 50px;
+        }
+
+        .creative-text {
+            padding-top: 100px;
+        }
+
+        .cr-title {
+            font-size: 30px;
+            font-weight: 500;
+            width: 100%;
+        }
+
+        .cr-sub {
+            color: gray;
+            font-size: 14px;
+            width: 100%;
+            max-width: 600px;
+        }
+
+        .cr-count {
+            display: flex;
+            justify-content: space-between;
+            max-width: 500px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .cr-count-num {
+            font-size: 50px;
+            color: #68d47e;
+            font-weight: bold;
+        }
+
+        .cr-count-text {
+            color: gray;
+            text-align: center;
+            font-weight: 500;
+        }
+
+        .cr-img {
+            height: 600px;
+            width: 100%;
+            transition-duration: 0.5s;
+            border-radius: 5px;
+        }
+
+        .cr-img:hover {
+            transform: translateY(-10px);
+            transition-duration: 0.5s;
+        }
+
+        .cr-img-area {
+            position: relative;
+        }
+
+        .cr-img-txt {
+            color: white;
+            background-image: linear-gradient(90deg, #64e37d 15%, #42c2db);
+            padding: 2px 5px 2px 5px;
+            border-radius: 5px;
+            position: absolute;
+            left: -30px;
+            bottom: 30px;
+        }
+
+        .cr-foot {
+            margin-top: 20px;
+            width: 100%;
+            max-width: 600px;
+        }
+
+        .cr-row {
+            display: flex;
+            font-size: 13px;
+            margin-bottom: 5px;
+        }
+
+        .cr-foot-count {
+            display: inline-block;
+            background-color: rgb(241, 239, 239);
+            width: 20px;
+            border-radius: 50%;
+            text-align: center;
+            color: gray;
+            font-weight: bold;
+            margin-right: 5px;
+            font-size: 10px;
+        }
+
+        .cr-col {
+            color: rgb(158, 156, 156);
+            font-size: 13px;
+            font-weight: 500;
+            margin-right: 45px;
+        }
+
+
+
+        @media (orientation: portrait) {
+            .hdr-logo {
+                margin-left: 10px;
+            }
+
+            .hdr-nav-items {
+                position: unset;
+            }
+
+            main {
+                background-image: url(images/cryptoImg.jpeg);
+                background-size: 500px;
+                padding: 0px 20px 20px 20px;
+                height: auto;
+            }
+
+            .main-area {
+                padding-top: 50px;
+            }
+
+            .main-vid-time {
+                color: white;
+            }
+
+            .main-sub {
+                font-size: 15px;
+                margin-bottom: 5px;
+                font-weight: 500;
+            }
+
+            .main-title {
+                font-size: 40px;
+            }
+
+            .main-footer {
+                background-color: rgb(76, 189, 137);
+                position: absolute;
+                bottom: -120px;
+                width: auto;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                padding: 5px 5px 5px 5px;
+                margin-right: 20px;
+                border-radius: 5px;
+            }
+
+            .main-ftr-text {
+                font-weight: 500;
+                font-size: 20px;
+                text-align: center;
+            }
+
+            .main-ftr-btn {
+                padding: 3px;
+                font-size: 15px;
+            }
+
+            .fixed-btn {
+                top: 94%;
+            }
+
+            .fixed-btn1 {
+                top: 94%;
+            }
+
+            section {
+                padding: 0px 20px 0px 20px;
+                height: auto;
+            }
+
+            .pur-area {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                padding: 100px 5px 0px 5px;
+            }
+
+            .pur-title1 {
+                font-size: 20px;
+                font-weight: 500;
+                line-height: 30px;
+            }
+
+            .pur-title2 {
+                font-size: 16px;
+                margin-bottom: 5px;
+            }
+
+            .pur-text {
+                font-size: 13px;
+            }
+
+            .pur-img {
+                gap: 5px;
+            }
+
+            .pur-img1 {
+                height: 120px;
+                width: 200px;
+                border-radius: 15px;
+            }
+
+            .pur-img3 {
+                width: 170px;
+                margin-top: 45px;
+                border-radius: 15px;
+            }
+
+            .pur-img2 {
+                width: 170px;
+                height: 120px;
+                border-radius: 15px;
+            }
+
+            .pur-img4 {
+                width: 170px;
+                height: 90px;
+                border-radius: 15px;
+            }
+
+            .pur-cards {
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+            }
+
+            .pur-article {
+                font-size: 18px;
+                text-align: center;
+                border-radius: 5px;
+            }
+
+            .creative-area {
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+            }
+
+            .cr-count {
+                padding: 0px 30px 0px 30px;
+            }
+
+            .cr-count-num {
+                font-size: 20px;
+            }
+
+            .cr-count-text {
+                font-size: 17px;
+            }
+
+            .cr-col {
+                font-size: 13px;
+                margin-right: 10px;
+            }
+
+            .cr-img {
+                height: 400px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+
+
+    <header>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid nav-container">
+                <div class="navbar-brand">
+                    <img src="images/wizixo_logo.jpg" class="hdr-logo" alt="">
+                </div>
+
+                <button class="navbar-toggler" data-bs-target="#navbar" data-bs-toggle="collapse">
+                    <span class="bi bi-list"></span>
+                </button>
+
+                <div class="collapse navbar-collapse hdr-nav-items" id="navbar">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link" href="#">Demos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Pages</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Portfolio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Elements</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Docs</a></li>
+                    </ul>
+
+                    <span class="bi bi-search me-3"></span>
+                    <button class="hdr-btn btn">Buy Now!</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <button class="fixed-btn btn"><span class="bi bi-cart-fill text-white">Buy Template</span></button>
+        <button class="fixed-btn1 btn"><span class="bi bi-caret-up text-white"></span></button>
+        <div class="main-area">
+            <div class="main-sub">A mint of creativity</div>
+            <div class="main-title">We are dreaming of the future.</div>
+            <div class="main-vid">
+                <span class="bi bi-play"></span>
+                <span class="main-vid-time">03:00 minutes</span>
+            </div>
+        </div>
+
+        <div class="main-footer">
+            <div class="main-ftr-text">Crafting visually stunning memorable experiences for web.</div>
+
+            <div><button class="btn main-ftr-btn">Learn more!</button></div>
+        </div>
+    </main>
+
+    <section>
+
+        <div class="pur-area">
+            <div class="pur-text">
+                <div class="pur-title1">We’re good,<br> Just ask our moms.</div>
+                <div class="pur-title2">Crafting visually stunning memorable experiences for web and interfaces.</div>
+                <div class="pur-sub">We have built a robust team, which is capable of delivering best quality of
+                    services when it comes to website-design, Website development, mobile application, content and
+                    digital marketing</div>
+
+                <button class="btn pur-btn">Purchase Now</button>
+            </div>
+
+            <div class="pur-img">
+                <div class="row">
+                    <div class="col"><img src="images/wizixo_pur1.jpg" alt="" class="pur-img1"></div>
+                    <div class="col"><img src="images/wizixo_pur2.jpg" alt="" class="pur-img2"></div>
+                </div>
+
+                <div class="row">
+                    <div class="col"><img src="images/wizixo_pur3.jpg" alt="" class="pur-img3"></div>
+                    <div class="col"><img src="images/wizixo_pur4.jpg" alt="" class="pur-img4"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="pur-cards">
+            <div class="pur-card">
+                <div class="pur-card-count">01</div>
+                <div class="pur-card-title">Solution Defining</div>
+                <div class="pur-card-text">We help our customers better manage their web presence in order to achieve
+                    greater success online.</div>
+                <div class="pur-card-foot">
+                    <span>Secure client network</span>
+                    <span>Manual updates</span>
+                    <span>Installed new routing</span>
+                    <span>Setup Windows updates</span>
+                </div>
+            </div>
+
+            <div class="pur-card">
+                <div class="pur-card-count">02</div>
+                <div class="pur-card-title">Premium Plugins</div>
+                <div class="pur-card-text">The real challenge before companies in today's world is to make their
+                    products appealing to everyone.</div>
+                <div class="pur-card-foot">
+                    <span>Secure client network</span>
+                    <span>Manual updates</span>
+                    <span>Installed new routing</span>
+                    <span>Setup Windows updates</span>
+                </div>
+            </div>
+
+            <div class="pur-card">
+                <div class="pur-card-count">03</div>
+                <div class="pur-card-title">High Performance</div>
+                <div class="pur-card-text">With us at your side, you will find the IT solution to achieve your strategic
+                    and financial goals.</div>
+                <div class="pur-card-foot">
+                    <span>Secure client network</span>
+                    <span>Manual updates</span>
+                    <span>Installed new routing</span>
+                    <span>Setup Windows updates</span>
+                </div>
+            </div>
+
+            <div class="pur-card">
+                <div class="pur-card-count">04</div>
+                <div class="pur-card-title">Budget accounting</div>
+                <div class="pur-card-text">We are emerging as one of the most promising private talent sourcing and
+                    management firms in the world.</div>
+                <div class="pur-card-foot">
+                    <span>Secure client network</span>
+                    <span>Manual updates</span>
+                    <span>Installed new routing</span>
+                    <span>Setup Windows updates</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="pur-article bg-dark">"Partnering with 500+ Fortune companies and mid-sized firms across enterprises,
+            experience the best in class, uniquely customized and scalable workforce solutions"</div>
+
+
+        <div class="creative-area">
+            <div class="creative-text">
+                <div class="cr-title">We are a full service Creative agency</div>
+                <div class="cr-sub">We are an insight and behavior driven creative marketing agency. A Full package
+                    Digital Creative Agency Specializing in: Video Production, Web Design, Branding, Brand Strategy,
+                    Content Marketing and Aerial Cinematography.</div>
+
+                <div class="cr-count">
+                    <div>
+                        <div class="cr-count-num">5257</div>
+                        <div class="cr-count-text">New Accounts</div>
+                    </div>
+
+                    <div>
+                        <div class="cr-count-num">3200</div>
+                        <div class="cr-count-text">Renewal Accounts</div>
+                    </div>
+                </div>
+
+                <div class="cr-sub">Benefits are the rewards that go beyond the paycheck. We offer a selection of
+                    benefits that meet our employees’ needs and expectation at different life stages. Examples for
+                    benefits at Wizixo are retirement benefits, health care and accident insurance.</div>
+
+
+                <div class="cr-foot">
+                    <div class="cr-row">
+                        <div class="cr-col"><span class="cr-foot-count">1</span>Career Development
+                        </div>
+                        <div class="cr-col"><span class="cr-foot-count">2</span>Future Provision
+                        </div>
+                        <div class="cr-col"><span class="cr-foot-count">3</span>Flexible Working
+                            Hours</div>
+                    </div>
+
+                    <div class="cr-row">
+                        <div class="cr-col"><span class="cr-foot-count">4</span>Health & Fitness
+                        </div>
+                        <div class="cr-col"><span class="cr-foot-count">5</span>Employee Gifts
+                        </div>
+                        <div class="cr-col"><span class="cr-foot-count">6</span>Welcome Aboard
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cr-img-area">
+                <img src="images/creative-img.jpg" alt="" class="cr-img">
+                <div class="cr-img-txt"><span class="bi bi-play-fill fs-4"></span>Play Video</div>
+            </div>
+        </div>
+
+    </section>
+</body>
+
+</html>
