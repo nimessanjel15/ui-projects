@@ -398,6 +398,105 @@
             margin-right: 45px;
         }
 
+        /*news and blogs*/
+
+        .news-area {
+            background-color: rgb(248, 248, 248);
+            padding: 0px 250px 50px 250px;
+            margin: 50px -150px 50px -150px;
+        }
+
+        .na-text {
+            padding-top: 100px;
+            text-align: center;
+        }
+
+        .na-title {
+            font-size: 30px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .na-sub {
+            color: gray;
+            font-size: 15px;
+            margin-bottom: 20px;
+        }
+
+        .na-cards {
+            display: grid;
+            grid-template-columns: 4fr 4fr 4fr;
+            gap: 20px;
+            padding-top: 40px;
+        }
+
+        .na-card {
+            background-color: white;
+            height: auto;
+            width: auto;
+            border: 1px solid rgb(209, 209, 209);
+            padding: 10px;
+        }
+
+
+        .na-cimg {
+            width: 100%;
+            max-width: 290px;
+
+        }
+
+        .na-cimgcont {
+            position: relative;
+        }
+
+        .na-cimg-text {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            color: white;
+            background-image: linear-gradient(90deg, #64e37d 15%, #42c2db);
+            width: 50px;
+            text-align: center;
+            font-size: 12px;
+            border-radius: 3px;
+        }
+
+        .na-cdes {
+            color: gray;
+            margin: 10px;
+            font-size: 15px;
+            transition-duration: 0.5s;
+        }
+
+        .na-cdes:hover {
+            color: #64e37d;
+            transition-duration: 0.5s;
+            cursor: pointer;
+        }
+
+        .na-ctitle {
+            color: gray;
+            margin: 10px;
+            font-weight: 500;
+            font-size: 18px;
+            transition-duration: 0.5s;
+        }
+
+        .na-ctitle:hover {
+            color: #64e37d;
+            transition-duration: 0.5s;
+            cursor: pointer;
+        }
+
+        .na-csub {
+            color: gray;
+            font-size: 12px;
+            margin: 10px;
+        }
+
+
+
+
 
 
         @media (orientation: portrait) {
@@ -596,6 +695,29 @@
             .cr-img {
                 height: 400px;
             }
+
+            .news-area {
+                padding: 0px 20px 20px 20px;
+                margin: 30px 0px 30px 0px;
+            }
+
+            .na-text {
+                padding-top: 50px;
+            }
+
+            .na-title {
+                font-size: 20px;
+            }
+
+            .na-sub {
+                font-size: 15px;
+            }
+
+            .na-cards {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+            }
         }
     </style>
 </head>
@@ -783,6 +905,49 @@
             <div class="cr-img-area">
                 <img src="images/creative-img.jpg" alt="" class="cr-img">
                 <div class="cr-img-txt"><span class="bi bi-play-fill fs-4"></span>Play Video</div>
+            </div>
+        </div>
+
+        <div class="news-area">
+            <div class="na-text">
+                <div class="na-title">Read our news, comments & thoughts</div>
+                <div class="na-sub">Facere nam dicta quia error non debitis accusantium. Unde explicabo perferendis
+                    assumenda obcaecati ut deserunt aliquam cupiditate fugiat animi corrupti illo velit.</div>
+            </div>
+
+
+            <div class="na-cards">
+                <div class="na-card">
+
+                    <div class="na-cimgcont"><img src="images/wizixo-blg1.jpg" alt="" class="na-cimg">
+                        <div class="na-cimg-text">Trend</div>
+                    </div>
+
+                    <div class="na-cdes">By Allen C, 2 hours ago</div>
+                    <div class="na-ctitle">The iconic stories behind those iconic blogs</div>
+                    <div class="na-csub">Facere nam dicta quia error non debitis accusantium. Unde explicabo perferendis
+                        assumenda obcaecati ut deserunt</div>
+                </div>
+
+                <div class="na-card">
+                    <div class="na-cimgcont"><img src="images/wizixo-blg2.jpg" alt="" class="na-cimg">
+                        <div class="na-cimg-text">Creative</div>
+                    </div>
+                    <div class="na-cdes">By Mark C, 19 hours ago</div>
+                    <div class="na-ctitle">The amazing stories of Mark C.</div>
+                    <div class="na-csub">Facere nam dicta quia error non debitis accusantium. Unde explicabo perferendis
+                        assumenda obcaecati ut deserunt</div>
+                </div>
+
+                <div class="na-card">
+                    <div class="na-cimgcont"><img src="images/wizixo-blg3.jpg" alt="" class="na-cimg">
+                        <div class="na-cimg-text">Craft</div>
+                    </div>
+                    <div class="na-cdes">By Stephen C, 1 year ago</div>
+                    <div class="na-ctitle">7 great lessons you can learn from business</div>
+                    <div class="na-csub">Facere nam dicta quia error non debitis accusantium. Unde explicabo perferendis
+                        assumenda obcaecati ut deserunt</div>
+                </div>
             </div>
         </div>
 
