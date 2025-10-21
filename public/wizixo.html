@@ -75,11 +75,12 @@
         .fixed-btn {
             position: fixed;
             top: 93vh;
-            right: 70px;
+            right: 60px;
             z-index: 10;
             background-color: rgb(162, 23, 23);
             color: white;
             font-weight: 500;
+            font-size: 13px;
         }
 
         .fixed-btn:hover {
@@ -94,6 +95,7 @@
             background-image: linear-gradient(90deg, #64e37d 10%, #42c2db);
             color: white;
             font-weight: 500;
+            font-size: 13px;
         }
 
         .fixed-btn1:hover {
@@ -494,9 +496,129 @@
             margin: 10px;
         }
 
+        /*collab brands*/
+        .collab-brands {
+            display: grid;
+            grid-template-columns: 2fr 2fr 2fr 2fr 2fr 2fr;
+            gap: 90px;
+        }
+
+        .coll-img {
+            height: auto;
+            width: 120px;
+        }
+
+        /*footer area*/
+
+        footer {
+            background-color: rgb(248, 248, 248);
+            padding: 50px 0px 0px 150px;
+            margin-top: 50px;
+        }
+
+        .footer-one {
+            display: grid;
+            grid-template-columns: 4fr 4fr 4fr;
+        }
+
+        .ftr-logo {
+            height: 50px;
+            width: 150px;
+        }
+
+        .ftr-about {
+            width: 100%;
+            max-width: 350px;
+        }
+
+        .footer-links {
+            display: grid;
+            grid-template-columns: 8fr 4fr;
+            gap: 20px;
+            margin-right: 50px;
+        }
+
+
+        .footer-info span {
+            color: gray;
+            font-size: 13px;
+            font-weight: 500;
+        }
+
+        .footer-info div {
+            margin-bottom: 10px;
+        }
+
+        .fq-links div {
+            margin-bottom: 7px;
+        }
+
+        .fq-links a {
+            color: gray;
+            font-size: 13px;
+            margin-bottom: 20px;
+            text-decoration: none;
+            transition-duration: 0.5s;
+        }
+
+        .fq-links a:hover {
+            color: #64e37d;
+            transition-duration: 0.5s;
+        }
+
+        .footer-main {
+            background-image: linear-gradient(90deg, #64e37d 15%, #42c2db);
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            padding: 15px 30px 0px 30px;
+            position: relative;
+        }
+
+        .env-ftr-icn {
+            position: absolute;
+            bottom: -5px;
+            right: 10px;
+            font-size: 60px;
+            color: rgb(99, 98, 98);
+            opacity: 0.5;
+        }
+
+        .ftr-btn {
+            background-color: black;
+            color: white;
+            border-radius: 3px;
+            padding: 4px;
+            margin-top: 20px;
+
+        }
+
+        .ftr-line {
+            border-bottom: 1px solid gray;
+            margin-top: 60px;
+            margin-bottom: 20px;
+        }
+
+        .ftr-end {
+            display: flex;
+            justify-content: space-between;
+            padding-right: 120px;
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+        }
+
+        .ftr-end1 {
+            font-size: 14px;
+            color: gray;
+        }
 
 
 
+        .ftr-end2 span {
+            font-size: 14px;
+            color: gray;
+            margin-right: 20px;
+        }
 
 
         @media (orientation: portrait) {
@@ -698,6 +820,10 @@
                 height: 400px;
             }
 
+            .cr-img-txt {
+                left: 10px;
+            }
+
             .news-area {
                 padding: 0px 20px 20px 20px;
                 margin: 30px 0px 30px 0px;
@@ -719,6 +845,61 @@
                 display: flex;
                 flex-direction: column;
                 gap: 20px;
+            }
+
+            .collab-brands {
+                display: grid;
+                grid-template-columns: 4fr 4fr 4fr;
+                gap: 20px;
+                padding-left: 20px;
+            }
+
+            .coll-img {
+                height: auto;
+                width: 70px;
+            }
+
+            footer {
+                background-color: rgb(248, 248, 248);
+                padding: 20px 20px 0px 20px;
+                margin-top: 50px;
+            }
+
+            .footer-one {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .ftr-about {
+                margin-bottom: 20px;
+            }
+
+            .footer-links {
+                grid-template-columns: 9fr 3fr;
+                gap: 30px;
+            }
+
+            .footer-main {
+                margin-top: 20px;
+                padding: 10px 20px 10px 20px;
+                max-width: 100%;
+            }
+
+            .ftr-end {
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                gap: 10px;
+                padding-right: 20px;
+            }
+
+            .ftr-end1 {
+                font-size: 10px;
+            }
+
+            .ftr-end2 span {
+                margin-right: 10px;
+                font-size: 10px;
             }
         }
     </style>
@@ -954,7 +1135,72 @@
             </div>
         </div>
 
+        <div class="collab-brands">
+            <div><img src="images/wizixo-collab1.jpg" alt="" class="coll-img"></div>
+            <div><img src="images/wizixo-collab2.jpg" alt="" class="coll-img"></div>
+            <div><img src="images/wizixo-collab3.jpg" alt="" class="coll-img"></div>
+            <div><img src="images/wizixo-collab4.jpg" alt="" class="coll-img"></div>
+            <div><img src="images/wizixo-collab5.jpg" alt="" class="coll-img"></div>
+            <div><img src="images/wizixo-collab6.jpg" alt="" class="coll-img"></div>
+        </div>
     </section>
+
+    <footer>
+        <div class="footer-one">
+            <div class="ftr-about">
+                <div><img src="images/wizixo-ftr-logo.jpg" alt="" class="ftr-logo mb-2"></div>
+                <div class="cr-sub mb-4">Wizixo is a highly creative, modern, visually stunning and Bootstrap 5 Creative
+                    Multi-purpose corporate and portfolio HTML5 template.</div>
+                <div class="cr-sub">It is based on the powerful Bootstrap 5 Framework to make sure an entirely
+                    responsive layout.</div>
+            </div>
+
+            <div class="footer-links">
+                <div class="footer-info">
+                    <div><span class="bi bi-map ftr-icn"><span class="ms-2">1421 Coburn Hollow Road Metamora, Near
+                                Center Point,
+                                IL
+                                61548.</span></span></div>
+
+                    <div><span class="bi bi-headphones ftr-icn"><span class="ms-2">(251) 854-6308</span></span></div>
+                    <div><span class="bi bi-envelope ftr-icn"><span class="ms-2">help@wizixo.com</span></span></div>
+                    <div><span class="bi bi-clock ftr-icn"><span class="ms-2">Mon - Fri: 09:00 - 21:00
+                                Sat & Sun: Closed</span></span></div>
+                </div>
+
+                <div class="fq-links">
+                    <div class="fw-semibold">QuicK links</div>
+                    <div><a href="">About</a></div>
+                    <div><a href="">Contact</a></div>
+                    <div><a href="">Home</a></div>
+                    <div><a href="">Blog</a></div>
+                    <div><a href="">Portfolio</a></div>
+                </div>
+
+            </div>
+
+            <div class="footer-main">
+                <div class="cr-sub text-white mb-3">Subscribe to our newsletter to receive exclusive offers.</div>
+                <input type="text" placeholder="Email Address" class="form-control">
+                <button class="btn ftr-btn">Join Now</button>
+                <div class="env-ftr-icn bi bi-envelope-open"></div>
+                <div class="bi bienve"></div>
+            </div>
+        </div>
+
+        <div class="ftr-line"></div>
+
+        <div class="ftr-end">
+            <div class="ftr-end1">©2021 All Rights Reserved by <span class="text-success">Wizixo.</span></div>
+            <div class="ftr-end2">
+                <span>Home</span>
+                <span>About us</span>
+                <span>Contact</span>
+                <span>Privacy Policy</span>
+                <span>Use of Terms</span>
+            </div>
+        </div>
+    </footer>
 </body>
 
 </html>
